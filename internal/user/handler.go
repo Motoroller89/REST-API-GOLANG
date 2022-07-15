@@ -29,30 +29,30 @@ func (h *handler) Register(router *httprouter.Router) {
 }
 
 func (h *handler) GetList(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte("this is list of users"))
 	w.WriteHeader(200)
+	w.Write([]byte("this is list of users"))
 }
 
 func (h *handler) CreateUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+	w.WriteHeader(201)
 	w.Write([]byte("this is list of users"))
-	w.WriteHeader(204)
 }
 
 func (h *handler) GetUserByUUID(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte("this is list of users"))
 	w.WriteHeader(200)
+	w.Write([]byte("this is list of users"))
 }
 func (h *handler) UpdateUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte("this is list of users"))
 	w.WriteHeader(204)
+	w.Write([]byte("this is list of users"))
 }
 
 func (h *handler) PartiallyUpdateUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte("this is list of users"))
 	w.WriteHeader(204)
+	w.Write([]byte("this is list of users"))
 }
 
 func (h *handler) DeleteUser(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
-	w.Write([]byte("this is list of users"))
 	w.WriteHeader(204)
+	w.Write([]byte("this is list of users"))
 }
