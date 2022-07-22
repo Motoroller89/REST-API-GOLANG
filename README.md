@@ -1,3 +1,5 @@
+This project was created to understand the basics of how rest-api works in GOLANG
+
 GET /users -- list of users -- 200, 404, 500 
 
 GET /users/:id -- user by id -- 200, 404, 500 
