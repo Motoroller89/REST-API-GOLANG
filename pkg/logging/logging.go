@@ -11,6 +11,8 @@ import (
 	"sync"
 )
 
+var e *logrus.Entry
+
 type Logger struct {
 	*logrus.Entry
 }
@@ -22,7 +24,11 @@ func (s *Logger) ExtraFields(fields map[string]interface{}) *Logger {
 var instance Logger
 var once sync.Once
 
-func GetLogger(level string) Logger {
+func GetLogger() *Logger {
+	return &Logger{e}
+}
+
+func Init(level string) Logger {
 	once.Do(func() {
 		logrusLevel, err := logrus.ParseLevel(level)
 		if err != nil {
